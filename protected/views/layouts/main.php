@@ -33,10 +33,17 @@
 				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'|', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Admin Menu: ', 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Post', 'url'=>array('/post'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Comment', 'url'=>array('/comment'), 'visible'=>!Yii::app()->user->isGuest),
+
 			),
 		)); ?>
 	</div><!-- mainmenu -->
+
+
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 			'links'=>$this->breadcrumbs,
