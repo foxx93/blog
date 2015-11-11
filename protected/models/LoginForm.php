@@ -17,7 +17,20 @@ class LoginForm extends CFormModel
 	 * Declares the validation rules.
 	 * The rules state that username and password are required,
 	 * and password needs to be authenticated.
-	 */
+
+	public function login12()
+{
+	$identity=new UserIdentity($this->username,$this->password);
+	$identity->authenticate();
+	switch($identity->errorCode)
+	{
+		case UserIdentity::ERROR_NONE:
+			Yii::app()->user->login($identity);
+			break;
+	}
+}
+	 * */
+
 	public function rules()
 	{
 		return array(
