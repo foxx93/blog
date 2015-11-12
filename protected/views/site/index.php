@@ -21,6 +21,7 @@ $this->pageTitle=Yii::app()->name;
     ),
 )); ?>
 
+
  <?php
  // Jelszó generálás
  // echo CPasswordHelper::hashPassword('demo');
