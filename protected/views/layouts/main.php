@@ -51,8 +51,18 @@
 	<?php endif?>
 
 	<?php echo $content; ?>
+	<?php
+	return array(
+		'components' => array(
+			'user' => array(
+				'class' => 'WebUser',
+			),
+		),
+	);?>
 
 	<div class="clear"></div>
+
+
 
 </div><!-- page -->
 

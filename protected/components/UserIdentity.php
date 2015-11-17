@@ -2,6 +2,8 @@
 class UserIdentity extends CUserIdentity
 {
 	private $_id;
+	const ERROR_STATUS_BANNED = 3;
+	const ERROR_STATUS_NOT_ACTIVATED = 4;
 
 	public function authenticate()
 	{
